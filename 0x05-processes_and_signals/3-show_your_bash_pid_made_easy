@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script displays PIDs and names of processes with 'bash' in their name
+grep bash /proc/*/comm 2>/dev/null | cut -d/ -f3- | sed 's:/comm::'
